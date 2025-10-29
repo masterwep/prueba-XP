@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Institución Ejemplo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">IT</div>
+      <div>
+        <h1>Institución Ejemplo</h1>
+        <p class="slogan">Educación, innovación y comunidad</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="btn ghost" data-scroll="#servicios">Servicios</button>
+      <button class="btn ghost" data-scroll="#nosotros">Nosotros</button>
+      <button class="btn ghost" data-scroll="#contacto">Contacto</button>
+    </nav>
+
+    <button class="btn" onclick="openContact()">Inscríbete</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Formamos líderes para el futuro</h2>
+        <p>Programas educativos, proyectos comunitarios y formación tecnológica que impulsan el talento.</p>
+        <div class="cta">
+          <button class="btn" data-scroll="#servicios">Nuestros servicios</button>
+          <button class="btn ghost" data-scroll="#nosotros">Saber más</button>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="img/edificio.jpg" alt="Edificio institucional" />
+        <video src="videos/presentacion.mp4" controls muted></video>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img/servicio1.jpg" alt="Educación de calidad">
+          <h3>Educación de calidad</h3>
+          <p>Planes formativos actualizados con énfasis en tecnología y pensamiento crítico.</p>
+        </div>
+        <div class="card">
+          <img src="img/servicio2.jpg" alt="Laboratorio tech">
+          <h3>Laboratorios y talleres</h3>
+          <p>Espacios equipados para aprender practicando: programación, makerspace y más.</p>
+        </div>
+        <div class="card">
+          <img src="img/servicio3.jpg" alt="Comunidad activa">
+          <h3>Comunidad activa</h3>
+          <p>Eventos, mentorías y redes que conectan a estudiantes con la industria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="about">
+      <img src="img/equipo.jpg" alt="Equipo de trabajo">
+      <div>
+        <h2>Nosotros</h2>
+        <p>Somos una institución comprometida con la formación integral y la innovación educativa.</p>
+        <ul>
+          <li>+20 años de trayectoria</li>
+          <li>Alianzas con empresas líderes</li>
+          <li>Programas reconocidos internacionalmente</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Institución Ejemplo — Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante -->
+  <button class="fab" onclick="openContact()">💬</button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Formulario de Inscripción</h3>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo" required />
+        <textarea placeholder="Cuéntanos sobre ti"></textarea>
+        <div class="modal-buttons">
+          <button type="submit" class="btn">Enviar</button>
+          <button type="button" class="btn ghost" onclick="closeContact()">Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
