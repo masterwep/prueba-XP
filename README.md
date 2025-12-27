@@ -1,2 +1,0 @@
-# prueba-XP
-No obligatorio 
